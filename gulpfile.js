@@ -92,13 +92,13 @@ gulp.task('clean', () => del(['dist'], { dot: true }))
 gulp.task('default',
   gulp.series('clean', gulp.parallel('assets', 'views', 'styles', 'scripts', 'favicon'),
   function () {
-    browserSync({
+    // browserSync({
       // The starter kit opens itself up in a new browser tab every time the app starts.
       // Uncomment the next line to prevent this behavior:
       // open: false,
-      notify: false,
-      server: 'dist'
-    })
+      // notify: false,
+      // server: 'dist'
+    // })
     gulp.watch('src/styles/**/*.scss', gulp.series('styles'))
     gulp.watch([
       'src/views/**/*.html',
